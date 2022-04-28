@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+  .card {
+    @include img-card-size($picture-size-tablet, 0.85*$picture-size-tablet, $card-radius);
+
+    &__image {
+      @include img-card-size($picture-size-tablet, 0.85*$picture-size-tablet, $card-radius);
+    }
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "p07 p03"
+      "p04 p10"
+      "p06 p05"
+      "p01 p08"
+      "p09 p02";
+  }
+}

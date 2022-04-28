@@ -1,0 +1,63 @@
+// @import './variables';
+
+.grid-container {
+  background-color: $page-background;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, auto);
+  justify-content: space-evenly;
+  justify-items: center;
+  grid-template-areas:
+    "p07"
+    "p03"
+    "p04"
+    "p10"
+    "p06"
+    "p05"
+    "p01"
+    "p08"
+    "p09"
+    "p02";
+}
+
+.p01 {
+  grid-area: p01;
+}
+
+.p02 {
+  grid-area: p02;
+}
+
+.p03 {
+  grid-area: p03;
+}
+
+.p04 {
+  grid-area: p04;
+}
+
+.p05 {
+  grid-area: p05;
+}
+
+.p06 {
+  grid-area: p06;
+}
+
+.p07 {
+  grid-area: p07;
+}
+
+.p08 {
+  grid-area: p08;
+  z-index: 20;
+}
+
+.p09 {
+  grid-area: p09;
+}
+
+.p10 {
+  grid-area: p10;
+}

@@ -1,0 +1,35 @@
+@import "./variables";
+@import "./mixin";
+
+.card {
+  @include img-card-size($picture-size-mobile, (.85 *$picture-size-mobile), $card-radius);
+  position: relative;
+  background-color: rgb(67, 67, 67);
+
+  &__image {
+    @include img-card-size($picture-size-mobile, (.85 *$picture-size-mobile), $card-radius);
+    position: absolute;
+    transition: all 900ms ease-in-out;
+    z-index: 20;
+  }
+
+  &:hover .card__img--blind {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  &__button {
+    position: absolute;
+    border-radius: $card-radius ;
+    margin-left: 35%;
+    margin-top: 50%;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+@import "./grid-mobile";
+@import "./grid-tablet";
+@import "./grid-desktop";
